@@ -11,7 +11,7 @@ Source:		http://home8.swipnet.se/~w-82625/binaries/%{name}%{version}-i386-linux.
 URL:		http://home8.swipnet.se/~w-82625/
 ExclusiveOS:	Linux
 ExclusiveArch:	i386
-BuildRoot:	/tmp/%{name}-%{version}-buildroot
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 BladeEnc is a program to generate MP3 files from WAV or AIFF sound files.
