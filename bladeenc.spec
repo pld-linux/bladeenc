@@ -37,14 +37,3 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-
-%changelog
-* Sat Jul 10 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [081-1]
-- rewrited: current version is avalaible in source code.
-- changed package name to bladeenc (Obsoletes: BladeEnc),
-- copyrihgt statment changed to GPL.
-
-* Sat Jan 02 1999 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [076-1]
-- initial RPM release
