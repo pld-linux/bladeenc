@@ -14,7 +14,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	BladeEnc
 
 %description
-BladeEnc is a program to generate MP3 files from WAV or AIFF sound files.
+BladeEnc is a program to generate MP3 files from WAV or AIFF sound
+files.
 
 %description -l pl
 BladeEnc jest programem s³u¿±cym do generowania plików MP3 z plików
