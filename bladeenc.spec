@@ -1,7 +1,7 @@
 Summary:	Blade's MP3 Encoder
 Summary(pl):	Encoder MP3 Blade'a
 Name:		bladeenc
-Version:	0.93.10
+Version:	0.94.1
 Release:	1
 Epoch:		1
 License:	GPL
@@ -9,7 +9,7 @@ Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-Source0:	http://bladeenc.mp3.no/source/%{name}-%{version}-src-unstable.tar.gz
+Source0:	http://bladeenc.mp3.no/source/%{name}-%{version}-src-stable.tar.gz
 URL:		http://bladeenc.mp3.no/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	BladeEnc
