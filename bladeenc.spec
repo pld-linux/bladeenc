@@ -10,7 +10,7 @@ Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://bladeenc.mp3.no/source/%{name}-%{version}-src-stable.tar.gz
 URL:		http://bladeenc.mp3.no/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	BladeEnc
 
 %description
