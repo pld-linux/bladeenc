@@ -1,0 +1,29 @@
+--- bladeenc-0.94.2/bladeenc/samplein.c.orig	Tue May  8 14:11:53 2001
++++ bladeenc-0.94.2/bladeenc/samplein.c	Mon Feb  3 20:47:55 2003
+@@ -75,7 +75,7 @@
+ static	int				initAIFF (SI_Stream *psInfo);
+ static	uint			readAIFFSamples (SI_Stream *psInfo, int nSamples, short *wpSamples);
+ 
+-static	int				myFseek (FILE *fp, int offset);
++static	int				myFseek (FILE *fp, unsigned int offset);
+ 
+ 
+ 
+@@ -332,6 +332,8 @@
+ 		{
+ 			if (fread (aTemp, sizeof(sFmtChunk), 1, psInfo->fp) != 1)
+ 				goto unexpEndOfFile;
++			if (intlLong(&header[4]) < sizeof(sFmtChunk))
++				goto unexpEndOfFile; /* I can't find "corrupted file" error code */
+ 			myFseek (psInfo->fp, intlLong(&header[4]) - sizeof(sFmtChunk));
+ 			fFmtChunkFound = TRUE;
+ 		}
+@@ -613,7 +615,7 @@
+ 
+ /* We can't use the real fseek() since you can't seek in a stream (stdin) */
+ 
+-static int					myFseek (FILE *fp, int offset)
++static int					myFseek (FILE *fp, unsigned int offset)
+ {
+ 	char					dummy[256];
+ 
