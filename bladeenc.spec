@@ -26,14 +26,14 @@ d¼wiêkowych w formacie WAV lub AIFF.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/usr/bin
-install -s bladeenc $RPM_BUILD_ROOT/usr/bin
+install -d $RPM_BUILD_ROOT%{_bindir}
+install -s bladeenc $RPM_BUILD_ROOT%{_bindir}
 
 %files
 %defattr(644,root,root,755)
 %doc manual.html
 
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
