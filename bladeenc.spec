@@ -3,6 +3,7 @@ Summary(pl):	Encoder MP3 Blade'a
 Name:		bladeenc
 Version:	0.91
 Release:	1
+Epoch:		1
 Copyright:	LGPL
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
