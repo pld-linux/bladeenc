@@ -29,7 +29,7 @@ d¼wiêkowych w formacie WAV lub AIFF.
 aclocal
 autoconf
 %configure
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
