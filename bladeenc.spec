@@ -1,14 +1,14 @@
 Summary:	Blade's MP3 Encoder
 Summary(pl):	Encoder MP3 Blade'a
 Name:		bladeenc
-Version:	082
-Release:	2
+Version:	0.91
+Release:	1
 Copyright:	LGPL
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source:		http://hem.bredband.net/tord/source/%{name}-%{version}-src-stable-2.tar.gz
-URL:		http://hem.bredband.net/tord/
+Source:		http://bladeenc.mp3.no/source/bladeenc-%{version}-src-stable.tar.gz
+URL:		http://bladeenc.mp3.no/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	BladeEnc
 
@@ -20,21 +20,24 @@ BladeEnc jest programem s³u¿±cym do generowania plików MP3 z plików
 d¼wiêkowych w formacie WAV lub AIFF.
 
 %prep
-%setup -q -n %{name}-%{version}-src-stable-2
+%setup -q -n %{name}-%{version}.0
 
 %build
-make CFLAGS="$RPM_OPT_FLAGS"
+LDFLAGS="-s"; export LDFALGS
+%configure
+make 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -s bladeenc $RPM_BUILD_ROOT%{_bindir}
+make install DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9fn README TODO ChangeLog AUTHORS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc bladeenc.html
+%doc {README,TODO,ChangeLog,AUTHORS}.gz
 %attr(755,root,root) %{_bindir}/*
