@@ -9,7 +9,7 @@ Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
 Source0:	http://bladeenc.mp3.no/source/%{name}-%{version}-src-stable.tar.gz
 Patch0:		%{name}-fseek-sec.patch
-Patch1:		%{name}-home_etc.patch
+Patch1:		%{name}-etc_dir.patch
 URL:		http://bladeenc.mp3.no/
 BuildRequires:	autoconf
 BuildRequires:	automake
