@@ -2,7 +2,7 @@ Summary:	Blade's MP3 Encoder
 Summary(pl):	Encoder MP3 Bladeya
 Name:		BladeEnc
 Version:	072
-Release:	2
+Release:	3
 Copyright:	Freeware
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
