@@ -26,6 +26,8 @@ d¼wiêkowych w formacie WAV lub AIFF.
 %setup -q
 
 %build
+aclocal
+autoconf
 %configure
 %{__make} 
 
