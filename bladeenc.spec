@@ -27,12 +27,12 @@ d¼wiêkowych w formacie WAV lub AIFF.
 %build
 LDFLAGS="-s"; export LDFLAGS
 %configure
-make 
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf README TODO ChangeLog AUTHORS
 
