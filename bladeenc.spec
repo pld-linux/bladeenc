@@ -30,7 +30,8 @@ install -d $RPM_BUILD_ROOT/usr/bin
 install -s bladeenc $RPM_BUILD_ROOT/usr/bin
 
 %files
-%attr(644,root,root,755) %doc manual.html
+%defattr(644,root,root,755)
+%doc manual.html
 
 %attr(755,root,root) /usr/bin/*
 
