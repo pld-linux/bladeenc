@@ -2,7 +2,7 @@ Summary:	Blade's MP3 Encoder
 Summary(pl):	Encoder MP3 Blade'a
 Name:		bladeenc
 Version:	0.91
-Release:	1
+Release:	2
 Epoch:		1
 Copyright:	LGPL
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
@@ -24,7 +24,7 @@ d¼wiêkowych w formacie WAV lub AIFF.
 %setup -q -n %{name}-%{version}.0
 
 %build
-LDFLAGS="-s"; export LDFALGS
+LDFLAGS="-s"; export LDFLAGS
 %configure
 make 
 
