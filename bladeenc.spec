@@ -1,17 +1,16 @@
-Summary:     Blade's MP3 Encoder
-Summary(pl): Encoder MP3 Bladeya
-Name:        BladeEnc
-Version:     076
-Release:     1
-Copyright:   Freeware
-Vendor:      Tord Jansson <tord.jansson@swipnet.se>
-Group:       Applications/Sound
-Group(pl):   Aplikacje/D¼wiêk
-Source:      http://home8.swipnet.se/~w-82625/binaries/%{name}-%{version}-i386-linux.tar.gz
-URL:         http://home8.swipnet.se/~w-82625/
-ExclusiveOS: Linux
-#ExclusiveArch:i386
-BuildRoot:   /tmp/%{name}-%{version}-root
+Summary:	Blade's MP3 Encoder
+Summary(pl):	Encoder MP3 Bladeya
+Name:		bladeenc
+Version:	081
+Release:	1
+Copyright:	GPL
+Vendor:		Tord Jansson <tord.jansson@swipnet.se>
+Group:		Applications/Sound
+Group(pl):	Aplikacje/D¼wiêk
+Source:		http://home.swipnet.se/~w-82625/encoder/source/%{name}-%{version}-src-stable.tar.gz
+URL:		http://home8.swipnet.se/~w-82625/
+BuildRoot:	/tmp/%{name}-%{version}-root
+Obsoletes:	BladeEnc
 
 %description
 BladeEnc is a program to generate MP3 files from WAV or AIFF sound files.
@@ -21,24 +20,31 @@ BladeEnc jest programem s³u¿±cym do generowania plików MP3 z plików
 d¼wiêkowych w formacie WAV lub AIFF.
 
 %prep
-%setup -q -n %{name}-0.76-i386-linux
+%setup -q -n bladesrc-%{version}
+
+%build
+make CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
+
 install -s bladeenc $RPM_BUILD_ROOT%{_bindir}
-gzip -9nf BladeEnc.html
-
-%files
-%defattr(644,root,root,755)
-%doc BladeEnc.html.gz
-
-%attr(755,root,root) %{_bindir}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%files
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/*
+
 %changelog
+* Sat Jul 10 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [081-1]
+- rewrited: current version is avalaible in source code.
+- changed package name to bladeenc (Obsoletes: BladeEnc),
+- copyrihgt statment changed to GPL.
+
 * Sat Jan 02 1999 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
+  [076-1]
 - initial RPM release
