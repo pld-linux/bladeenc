@@ -8,6 +8,7 @@ License:	GPL
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
 Source0:	http://bladeenc.mp3.no/source/%{name}-%{version}-src-stable.tar.gz
+# Source0-md5:	9b9f6eafe1637a48a67f0a0f8f6e71ad
 Patch0:		%{name}-fseek-sec.patch
 Patch1:		%{name}-etc_dir.patch
 URL:		http://bladeenc.mp3.no/
