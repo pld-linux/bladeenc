@@ -7,8 +7,8 @@ Copyright:	LGPL
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source:		http://hem.bredband.net/users/99/tord/source/%{name}-%{version}-src-stable-2.tar.gz
-URL:		http://bladeenc.cjb.net/
+Source:		http://hem.bredband.net/tord/source/%{name}-%{version}-src-stable-2.tar.gz
+URL:		http://hem.bredband.net/tord/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	BladeEnc
 
