@@ -26,7 +26,7 @@ d¼wiêkowych w formacie WAV lub AIFF.
 %setup -q
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}
@@ -36,12 +36,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README TODO ChangeLog AUTHORS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,TODO,ChangeLog,AUTHORS}.gz
+%doc README TODO ChangeLog AUTHORS
 %attr(755,root,root) %{_bindir}/*
