@@ -31,6 +31,7 @@ d¼wiêkowych w formacie WAV lub AIFF.
 %patch1 -p1
 
 %build
+cp -f /usr/share/automake/config.sub .
 %{__aclocal}
 %{__autoconf}
 %configure
