@@ -1,5 +1,5 @@
 Summary:	Blade's MP3 Encoder
-Summary(pl.UTF-8):   Koder MP3 Blade'a
+Summary(pl.UTF-8):	Koder MP3 Blade'a
 Name:		bladeenc
 Version:	0.94.2
 Release:	6
