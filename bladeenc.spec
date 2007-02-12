@@ -1,5 +1,5 @@
 Summary:	Blade's MP3 Encoder
-Summary(pl):	Koder MP3 Blade'a
+Summary(pl.UTF-8):   Koder MP3 Blade'a
 Name:		bladeenc
 Version:	0.94.2
 Release:	6
@@ -21,9 +21,9 @@ Obsoletes:	BladeEnc
 BladeEnc is a program to generate MP3 files from WAV or AIFF sound
 files.
 
-%description -l pl
-BladeEnc jest programem s³u¿±cym do generowania plików MP3 z plików
-d¼wiêkowych w formacie WAV lub AIFF.
+%description -l pl.UTF-8
+BladeEnc jest programem sÅ‚uÅ¼Ä…cym do generowania plikÃ³w MP3 z plikÃ³w
+dÅºwiÄ™kowych w formacie WAV lub AIFF.
 
 %prep
 %setup -q
