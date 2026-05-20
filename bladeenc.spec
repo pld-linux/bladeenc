@@ -2,7 +2,7 @@ Summary:	Blade's MP3 Encoder
 Summary(pl.UTF-8):	Koder MP3 Blade'a
 Name:		bladeenc
 Version:	0.94.2
-Release:	8
+Release:	9
 Epoch:		1
 License:	GPL
 Vendor:		Tord Jansson <tord.jansson@swipnet.se>
@@ -11,6 +11,7 @@ Source0:	http://bladeenc.mp3.no/source/%{name}-%{version}-src-stable.tar.gz
 # Source0-md5:	9b9f6eafe1637a48a67f0a0f8f6e71ad
 Patch0:		%{name}-fseek-sec.patch
 Patch1:		%{name}-etc_dir.patch
+Patch2:		%{name}-format-security.patch
 URL:		http://bladeenc.mp3.no/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -29,10 +30,12 @@ dźwiękowych w formacie WAV lub AIFF.
 %setup -q
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
 %{__aclocal}
+%{__automake} -a -c
 %{__autoconf}
 %configure
 %{__make}

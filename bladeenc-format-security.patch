@@ -1,0 +1,29 @@
+--- bladeenc-0.94.2/bladeenc/main.c.orig	2026-05-20 11:38:45.479323203 +0200
++++ bladeenc-0.94.2/bladeenc/main.c	2026-05-20 11:38:54.549561367 +0200
+@@ -813,7 +813,7 @@
+ 				wheelindex = (wheelindex + 1) % 4;
+ 			}
+ 
+-			fprintf (textout, temp);
++			fputs (temp, textout);
+ 			fflush (textout);
+ 			break;
+ 
+@@ -828,7 +828,7 @@
+ 				wheelindex = (wheelindex + 1) % 4;
+ 			}
+ 
+-			fprintf (textout, temp);
++			fputs (temp, textout);
+ 			fflush (textout);
+ 			break;
+ 
+@@ -847,7 +847,7 @@
+ 				wheelindex = (wheelindex + 1) % 4;
+ 			}
+ 
+-			fprintf (textout, temp);
++			fputs (temp, textout);
+ 			fflush (textout);
+ 			break;
+ 
